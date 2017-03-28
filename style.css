@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.container {
+  display: inline-block; }
+
+.nav {
+  background-image: -webkit-linear-gradient(#4481ff, #2539bc);
+  height: 5em;
+  width: 100%;
+  position: absolute; }
+
+.nav_item {
+  margin: auto;
+  color: #DDDDDD;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  height: 5em;
+  padding-top: 1.66667em; }
+
+li {
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 5em; }
+
+li:hover {
+  background-image: -webkit-linear-gradient(rgba(57, 159, 112, 0.69), #6d8074);
+  color: #DDD;
+  border-style: dotted;
+  border-color: orange;
+  border-radius: 100%; }
+
+.mission {
+  margin: auto;
+  text-align: right;
+  font-family: "B Koodak";
+  margin-top: 30px;
+  font-size: 130px;
+  color: #d9bc00;
+  padding-top: 70px;
+  padding-right: 30px;
+  width: 100%;
+  height: 800px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("selection.jpg"); }
+
+/*# sourceMappingURL=style.css.map */
