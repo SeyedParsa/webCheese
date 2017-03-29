@@ -2,9 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    direction: rtl;
 }
 
-$nav_height: 5em;
+$nav_height: 70px;
+
+@mixin card($i, $j){
+    position: absolute;
+    text-align: center;
+    padding-top: 80px;
+    text-decoration: none;
+    font-family: 'B Koodak', sans-serif;
+    top: 370px + $i*100;
+    left: 740px + $j*100;
+    width: 100px;
+    height: 100px;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+@mixin card_hover($image){
+    background-image: url($image);
+    background-size: cover;
+    color: transparent;
+}
 
 .container {
     display: inline-block;
@@ -15,17 +36,24 @@ $nav_height: 5em;
     height: $nav_height;
     width: 100%;
     position: absolute;
+    z-index: 5;
 }
 
 .nav_item {
     margin: auto;
     color: #DDDDDD;
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
+    font-family: 'B Yekan', sans-serif;
+    font-size: 120%;
     display: inline-block;
     height: $nav_height;
+    width: 100%;
     padding-top: $nav_height/3;
+}
+
+.nav_item:hover {
+    color: gold;
+    font-weight: bold;
 }
 
 li {
@@ -36,25 +64,146 @@ li {
 }
 
 li:hover{
-    background-image: -webkit-linear-gradient(rgba(57, 159, 112, 0.69), #6d8074);
-    color: #DDD;
-    border-style: dotted;
-    border-color: orange;
-    border-radius: 100%;
+    background-image: -webkit-linear-gradient(rgb(58, 111, 215), #0a1abc);
 }
 
 .mission {
-    margin: auto;
-    text-align: right;
-    font-family: "B Koodak";
     margin-top: 30px;
-    font-size: 130px;
-    color: #d9bc00;
-    padding-top: 70px;
+    padding-top: $nav_height;
     padding-right: 30px;
     width: 100%;
     height: 800px;
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("selection.jpg");
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.container {
+    margin: auto;
+    text-align: center;
+    font-family: "B Yekan";
+}
+
+.intro {
+    float: left;
+    background-color: #88ffcd;
+    opacity: 0.7;
+    width: 30%;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 2em;
+}
+
+h1 {
+    font-family: 'B Morvarid', serif;
+    font-size: 4em;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    color: orangered;
+}
+
+p {
+    font-family: 'B Nazanin', sans-serif;
+    font-size: 3em;
+    line-height: 2em;
+    padding-right: 1em;
+    padding-left: 1em;
+    border-radius: 80%;
+}
+
+b {
+    color: rebeccapurple;
+}
+
+#leader {
+    position: relative;
+    top: 250px;
+    left: 70px;
+    font-family: "B Kamran", serif;
+    color: #ff4943;
+}
+
+#members {
+    position: relative;
+    top: 320px;
+    right: 20px;
+    font-family: "B Kamran", serif;
+    color: #ffc434;
+    direction: ltr;
+}
+
+.pooya {
+    @include card(0, 0);
+    top: 290px;
+    left: 685px;
+}
+
+.pooya:hover {
+    @include card_hover('pooya_mosaddegh.jpg');
+}
+
+.ali {
+    @include card(0, 1);
+}
+
+.ali:hover {
+    @include card_hover('ali_ahmadi.jpg');
+}
+
+.mahdih {
+    @include card(0, 2);
+}
+
+.mahdih:hover {
+    @include card_hover('mahdi_hasanzadeh.jpg')
+}
+
+.hamid {
+    @include card(1, 0);
+}
+
+.hamid:hover {
+    @include card_hover('hamid_hashemi.jpg');
+}
+
+.mahdigh {
+    @include card(1, 1);
+}
+
+.mahdigh:hover {
+    @include card_hover('mahdi_ghorbani.jpg');
+}
+
+.labbaf {
+    @include card(1, 2);
+}
+
+.labbaf:hover {
+    @include card_hover('faezeh_labbaf.jpg');
+}
+
+.seyedparsa {
+    @include card(2, 0);
+}
+
+.seyedparsa:hover {
+    @include card_hover('seyedparsa_mirtaheri.jpg');
+}
+
+.hossein {
+    @include card(2, 1);
+}
+
+.hossein:hover {
+    @include card_hover('hossein_ahmadzadeh.jpg');
+}
+
+.reza {
+    @include card(2, 2);
+}
+
+.reza:hover {
+    @include card_hover('reza_zeny.jpg');
 }
